@@ -1,7 +1,7 @@
 # Проект «Sedona»
 
 * Студент: [Михаил Богданов](https://htmlacademy.ru/profile/id5388).
-* Наставник: `Unknown`.
+* Наставник: [Сергей Попов](https://htmlacademy.ru/profile/id42761).
 
 --
 
