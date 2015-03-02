@@ -11,137 +11,135 @@
     <body>
         <div class="master-wrapper">
             <header class="main-header">
-                <div class="header-rubber-top">
-                    <nav>
-                        <ul>
-                            <li>
+                <div class="main-header__rubber-top">
+                    <nav class="main-nav">
+                        <ul class="main-nav__list">
+                            <li class="main-nav__active-item">
                                 <a href="#">Карта штата</a>
-                                <button class="menu-close"></button>
+                                <button class="main-header__toggle main-header_toggle--close-menu"></button>
                             </li>
-                            <li>
+                            <li class="main-nav__list-item">
                                 <a href="#">Информация</a>
                             </li>
-                            <li>
+                            <li class="main-nav__list-item">
                                 <a href="#">Фото и видео</a>
                             </li>
-                            <li>
+                            <li class="main-nav__list-item">
                                 <a href="#">Гостиницы</a>
                             </li>
                         </ul>
                     </nav>   
                 </div>
-                <div class="header-rubber-bottom">
-                    <a class="logo" href="#"><img src="#" alt="logo" /></a>
-                    <button class="open-menu"></button>
-                    <div class="header-promo">
+                <div class="main-header__rubber-bottom">
+                    <a class="main-header__logo" href="#"><img src="#" alt="logo" /></a>
+                    <button class="main-header__toggle main-header_toggle--open-menu"></button>
+                    <div class="main-header__promo">
                         <img src="#" alt="promo" />
                     </div>
                 </div>
             </header>
 
             <article class="reasons">
-                <header class="reasons-header">
-                    <h1>Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>    
-                    <p>Рассмотрим 5 причин, по которым Седона круче чем Гранд Каньон!</p>
+                <header class="reasons__header">
+                    <h1 class="reasons__header-title">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>    
+                    <p class="reasons__header-about">Рассмотрим 5 причин, по которым Седона круче чем Гранд Каньон!</p>
                 </header>
-                <div class="reason-item">
-                    <h2>Настоящий городок</h2>
-                    <p>- №1 -</p>
-                    <p>Седона не атракцион для туристов, там течет своя жизнь</p>
+                <div class="reasons__reason-item">
+                    <h2 class="reasons__item-title">Настоящий городок</h2>
+                    <p class="reasons__item-number">- №1 -</p>
+                    <p class="reasons__item-about">Седона не атракцион для туристов, там течет своя жизнь</p>
                     <img src="" alt="img-reason-1" />
                 </div>  
-                <div class="reason-item reason-img">
-                    <ul>
-                        <li>
+                <div class="reasons__reason-item reasons_reason-item--reason-img">
+                    <ul class="causes-list">
+                        <li class="causes-list__item">
                             <img src="" alt="house" />
-                            <h2>Жилье</h2>
-                            <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                            <h2 class="causes-list__title">Жилье</h2>
+                            <p class="causes-list__about">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                         </li>
-                        <li>
+                        <li class="causes-list__item">
                             <img src="" alt="gift" />
-                            <h2>Сувениры</h2>
-                            <p>Не только китайского, но и местного производства!</p>
+                            <h2 class="causes-list__title">Сувениры</h2>
+                            <p class="causes-list__about">Не только китайского, но и местного производства!</p>
                         </li>
-                        <li>
+                        <li class="causes-list__item">
                             <img src="" alt="food" />
-                            <h2>Еда</h2>
-                            <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>                
+                            <h2 class="causes-list__title">Еда</h2>
+                            <p class="causes-list__about">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>                
                         </li>
                     </ul>
-                </div>
-                <div class="reason-item">
-                    <h2>Там есть мост Дьявола</h2>
-                    <p>- №2 -</p>
-                    <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+                </div >
+                <div class="reasons__reason-item">
+                    <h2 class="reasons__item-title">Там есть мост Дьявола</h2>
+                    <p class="reasons__item-number">- №2 -</p>
+                    <p class="reasons__item-about">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
                     <img src="" alt="img-reason-2" />
                 </div>
-                <div class="reason-grey">
-                    <div class="reason-item">
-                        <h2>Небольшая площадь</h2>
-                        <p>- №3 -</p>
-                        <p>Все достопримечательности находятся очень близко</p>
+                <div class="reasons__reason-item reasons__reason-item--reason-grey">
+                    <div class="reasons__reason-item">
+                        <h2 class="reasons__item-title">Небольшая площадь</h2>
+                        <p class="reasons__item-number">- №3 -</p>
+                        <p class="reasons__item-about">Все достопримечательности находятся очень близко</p>
                     </div>
-                    <div class="reason-item">
-                        <h2>Красивая дорога</h2>
-                        <p>- №4 -</p>
-                        <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+                    <div class="reasons__reason-item">
+                        <h2 class="reasons__item-title">Красивая дорога</h2>
+                        <p class="reasons__item-number">- №4 -</p>
+                        <p class="reasons__item-about">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
                     </div>
-                    <div class="reason-item">
-                        <h2>Мало туристов</h2>
-                        <p>- №5 -</p>
-                        <p>Большинство едет в Гранд Каньон и толпится там</p>
+                    <div class="reasons__reason-item">
+                        <h2 class="reasons__item-title">Мало туристов</h2>
+                        <p class="reasons__item-number">- №5 -</p>
+                        <p class="reasons__item-about">Большинство едет в Гранд Каньон и толпится там</p>
                     </div>
                 </div>
             </article>
 
             <section class="hotels">
-                <header class="hotels-header">
-                    <p>Заинтересовались?</p>
-                    <p>Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Седоне</p>          
+                <header class="hotels__header">
+                    <p class="hotels__header-title">Заинтересовались?</p>
+                    <p class="hotels__header-about">Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Седоне</p>          
                 </header>
+                <h2 class="hotels__search-title">Поиск гостиницы в Седоне</h2>
                 <div class="search-hotel">
-                    <h2>Поиск гостиницы в Седоне</h2>
-                </div>
-                <div class="search-hotel-parameters">
-                    <form action="/echo" method="post">
-                        <label for="in">Дата заезда:</label>
-                        <input type="date" id="in">
-                        <label>Дата выезда:</label>
-                        <input for="out" type="date" id="out">
-                        <div class="column">
-                            <label for="people">Взрослые:</label>
-                            <button class="control minus"></button>
+                    <form class="search-hotel__form" action="/echo" method="post">
+                        <label class="search-hotel__label" for="in">Дата заезда:</label>
+                        <input class="search-hotel__input" type="date" id="in">
+                        <label class="search-hotel__label">Дата выезда:</label>
+                        <input class="search-hotel__input" for="out" type="date" id="out">
+                        <div class="search-hotel__column">
+                            <label class="search-hotel__label" for="people">Взрослые:</label>
+                            <button class="search-hotel__control search-hotel__control--minus"></button>
                             <input type="text" id="people" class="count" value="2">
-                            <button class="control plus"></button>
+                            <button class="search-hotel__control search-hotel__control--plus"></button>
                         </div>
-                        <div class="column">
-                            <label for="children">Дети:</label>
-                            <button class="control minus"></button>                    
-                            <input type="text" id="children" class="count" value="0">
-                            <button class="control plus"></button>
+                        <div class="search-hotel__column">
+                            <label class="search-hotel__label" for="children">Дети:</label>
+                            <button class="search-hotel__control search-hotel__control--minus"></button>                    
+                            <input class="search-hotel__input" type="text" id="children" class="count" value="0">
+                            <button class="search-hotel__control search-hotel__control--plus"></button>
                         </div>
-                        <button type="submit" class="btn" value="Найти"></button>
+                        <button class="search-hotel__btn search-hotel__btn--submit" type="submit" value="Найти"></button>
                     </form>
                 </div>
             </section>
 
             <footer class="main-footer">
-                <div class="map">
+                <div class="main-footer__map">
                 </div>
-                <div class="links">
-                    <p class="links-hashtag">
+                <div class="main-footer__links">
+                    <p class="main-footer__hashtag">
                         #VISITSEDONA
                     </p>
-                    <div class="links-social-btns">
-                        <a class="social-btn twitter" href="#"></a>
-                        <a class="social-btn facebook" href="#"></a>
-                        <a class="social-btn youtube" href="#"></a>
+                    <div class="social-btns">
+                        <a class="social-btns__btn social-btns__btn--twitter" href="#"></a>
+                        <a class="social-btns__btn social-btns__btn--facebook" href="#"></a>
+                        <a class="social-btns__btn social-btns__btn--youtube" href="#"></a>
                     </div>
-                    <div class="links-copyright">
+                    <div class="main-footer__links-copyright">
                         Website by 
-                        <a class="links-copyright-a" href="#" ></a>
+                        <a class="main-footer__links-copyright-a" href="#" ></a>
                         for
-                        <a class="links-copyright-htmlacademy" href="#"></a>
+                        <a class="main-footer__links-copyright-htmlacademy" href="#"></a>
                     </div>
                 </div>
             </footer>
