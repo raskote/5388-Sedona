@@ -5,8 +5,8 @@
         <title>Landing Page</title>
         <meta charset="utf-8">
         <title>HTML Academy: Sedona</title>
-        <!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
-    </head>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
 
     <body>
         <div class="master-wrapper">
@@ -16,7 +16,7 @@
                         <ul class="main-nav__list">
                             <li class="main-nav__list-item main-nav__list-item--active">
                                 <a href="#">Карта штата</a>
-                                <button class="btn btn--close-menu"></button>
+                                <button type="button" class="btn btn--close-menu"></button>
                             </li>
                             <li class="main-nav__list-item">
                                 <a href="#">Информация</a>
@@ -31,64 +31,70 @@
                     </nav>   
                 </div>
                 <div class="main-header__rubber-bottom">
-                    <a class="main-header__logo" href="#"><img src="#" alt="logo" /></a>
-                    <button class="btn btn--open-menu"></button>
+                    <div class="main-header__logo-line">
+						<a class="main-header__logo" href="index.html"><img src="/img/logo.png" alt="logo" /></a>
+						<button class="btn btn--open-menu"></button>
+					</div>
                     <div class="main-header__promo">
-                        <img src="#" alt="promo" />
+                        <img src="/img/promo.png" alt="promo" />
                     </div>
                 </div>
             </header>
 
             <article class="reasons">
                 <header class="reasons-header">
-                    <h1 class="reasons-header__title">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>    
+                    <h1 class="reasons-header__title">Седона — небольшой<br /> городок в Аризоне,<br /> заслуживающий большего!</h1>    
                     <p class="reasons-header__about">Рассмотрим 5 причин, по которым Седона круче чем Гранд Каньон!</p>
                 </header>
-                <div class="reason-item reason-item--blue">
+                <div class="reason-item reason-item--blue reason-item--first">
                     <h2 class="reason-item__title">Настоящий городок</h2>
-                    <p class="reason-item__number">- №1 -</p>
+                    <p class="reason-item__number">— №1 —</p>
                     <p class="reason-item__about">Седона не атракцион для туристов, там течет своя жизнь</p>
-                    <img src="" alt="img-reason-1" />
+                    <div class="reason-item--image" >
+						<img src="/img/img-reason--first.jpg" alt="img-reason-1"/>
+					</div>
                 </div>  
                 <div class="reasons-wrapper">
                     <ul class="reasons-list">
-                        <li class="reason-item reason-item--item">
-                            <img src="" alt="house" />
+                        <li class="reason-item reason-item--img">
+                            <img src="/img/reason-item__img--house.png" alt="house" />
                             <h2 class="reason-item__title">Жилье</h2>
                             <p class="reason-item__about">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                         </li>
-                        <li class="reason-item reason-item--item">
-                            <img src="" alt="gift" />
+                        <li class="reason-item reason-item--img">
+                            <img src="/img/reason-item__img--gift.png" alt="gift" />
                             <h2 class="reason-item__title">Сувениры</h2>
                             <p class="reason-item__about">Не только китайского, но и местного производства!</p>
                         </li>
-                        <li class="reason-item reason-item--item">
-                            <img src="" alt="food" />
+                        <li class="reason-item reason-item--img">
+                            <img src="/img/reason-item__img--food.png" alt="food" />
                             <h2 class="reason-item__title">Еда</h2>
                             <p class="reason-item__about">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>                
                         </li>
                     </ul>
                 </div >
-                <div class="reason-item reason-item--blue">
+                <div class="reason-item reason-item--blue reason-item--second">
                     <h2 class="reason-item__title">Там есть мост Дьявола</h2>
-                    <p class="reason-item__number">- №2 -</p>
+                    <p class="reason-item__number">— №2 —</p>
                     <p class="reason-item__about">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-                    <img src="" alt="img-reason-2" />
+                    <div class="reason-item--image">
+                    	<img src="/img/img-reason--second.jpg" alt="img-reason-2" />
+					</div>
                 </div>
                 <div class="reasons-wrapper">
                     <div class="reason-item reason-item--grey">
                         <h2 class="reason-item__title">Небольшая площадь</h2>
-                        <p class="reason-item__number">- №3 -</p>
+                        <p class="reason-item__number">— №3 —</p>
                         <p class="reason-item__about">Все достопримечательности находятся очень близко</p>
                     </div>
                     <div class="reason-item reason-item--grey">
                         <h2 class="reason-item__title">Красивая дорога</h2>
-                        <p class="reason-item__number">- №4 -</p>
+                        <p class="reason-item__number">— №4 —</p>
                         <p class="reason-item__about">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
                     </div>
                     <div class="reason-item reason-item--grey">
                         <h2 class="reason-item__title">Мало туристов</h2>
-                        <p class="reason-item__number">- №5 -</p>
+                        <p class="reason-item__number">— №5 —</p>
                         <p class="reason-item__about">Большинство едет в Гранд Каньон и толпится там</p>
                     </div>
                 </div>
@@ -109,42 +115,43 @@
                         <div class="search-hotel__column">
                             <label class="search-hotel__label" for="people">Взрослые:</label>
                             <button class="search-hotel__control search-hotel__control--minus"></button>
-                            <input type="text" id="people" class="count" value="2">
+                            <input type="text" id="people" class="search-hotel__input search-hotel__input--count" value="2">
                             <button class="search-hotel__control search-hotel__control--plus"></button>
                         </div>
                         <div class="search-hotel__column">
                             <label class="search-hotel__label" for="children">Дети:</label>
                             <button class="search-hotel__control search-hotel__control--minus"></button>                    
-                            <input class="search-hotel__input" type="text" id="children" class="count" value="0">
+                            <input type="text" id="children" class="search-hotel__input search-hotel__input--count" value="0">
                             <button class="search-hotel__control search-hotel__control--plus"></button>
                         </div>
-                        <button class="btn btn--submit" type="submit" value="Найти"></button>
+                        <button class="btn btn--submit" type="submit">Найти</button>
                     </form>
                 </div>
             </section>
 
             <footer class="main-footer">
-                <div class="main-footer__map">
+                <div id="map" class="main-footer__map">
                 </div>
                 <div class="main-footer__links">
-                    <p class="main-footer__hashtag">
-                        #VISITSEDONA
-                    </p>
+				  	<div class="main-footer__hashtag">
+						<a href="index.html">#VISITSEDONA</a>
+					</div>
                     <div class="social">
                         <a class="social__btn social__btn--twitter" href="#"></a>
                         <a class="social__btn social__btn--facebook" href="#"></a>
                         <a class="social__btn social__btn--youtube" href="#"></a>
                     </div>
                     <div class="main-footer__links-copyright">
-                        Website by 
+                        <p>Website by</p>
                         <a class="main-footer__links-copyright-a" href="#" ></a>
-                        for
+                        <p>for</p>
                         <a class="main-footer__links-copyright-htmlacademy" href="#"></a>
                     </div>
                 </div>
             </footer>
         </div>
-            
-        <!-- <script src="js/script.js"></script> -->
+        
+   	<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/script.min.js"></script>
     </body>
 </html>
