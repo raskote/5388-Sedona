@@ -1,4 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic);
+/* Foundation - Zero layer
+---------------------------------------------------------------------------------- */
+/* Fonts */
+/* /Fonts */
+/* Normalize */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -171,8 +176,8 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   height: 0;
 }
 /**
@@ -279,7 +284,8 @@ input {
  */
 input[type="checkbox"],
 input[type="radio"] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -299,9 +305,8 @@ input[type="number"]::-webkit-outer-spin-button {
  *    (include `-moz` to future-proof).
  */
 input[type="search"] {
-  -webkit-box-sizing: content-box;
   /* 1 */
-  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box;
 
@@ -360,44 +365,17 @@ td,
 th {
   padding: 0;
 }
-body {
-  font-size: 14px;
-  font-family: "PT Sans", sans-serif;
-}
-.master-wrapper {
-  margin: 0 auto;
-  width: 320px;
-  background-color: white;
-  box-shadow: 0 0 15px 1px rgba(0, 1, 1, 0.2);
-}
-body {
-  background-color: #f2f2f2;
-}
-@media (min-width: 768px) and (max-width: 1280px) {
-  .master-wrapper {
-    width: 768px;
-    background-color: white;
-    box-shadow: 0 0 15px 1px rgba(0, 1, 1, 0.2);
-  }
-  body {
-    background-color: #f2f2f2;
-  }
-}
-@media (min-width: 1280px) {
-  .master-wrapper {
-    padding: 0;
-    width: 1200px;
-    background-color: white;
-    box-shadow: 0 0 15px 1px rgba(0, 1, 1, 0.2);
-  }
-  body {
-    background-color: #f2f2f2;
-  }
-}
+/* /Normalize */
+/* /Foundation 
+---------------------------------------------------------------------------------- */
+/* Base - First layer
+---------------------------------------------------------------------------------- */
+/* Buttons */
 .btn--close-menu {
   position: absolute;
   right: 6%;
   margin-top: -12%;
+  padding: 0;
   width: auto;
   height: auto;
   outline: none;
@@ -420,6 +398,7 @@ body {
   fill: #81b3d2;
 }
 .btn--search {
+  display: block;
   margin-top: 16px;
   padding: 30px 5px;
   width: 320px;
@@ -498,6 +477,57 @@ body {
     margin-bottom: 1px;
   }
 }
+/* /Buttons */
+/* /Base 
+---------------------------------------------------------------------------------- */
+/* Project - Second layer
+---------------------------------------------------------------------------------- */
+/* Wrapper */
+body {
+  font-size: 14px;
+  font-family: "PT Sans", sans-serif;
+}
+.master-wrapper {
+  margin: 0 auto;
+  width: 320px;
+  background-color: white;
+  -webkit-box-shadow: 0 0 15px 1px rgba(0, 1, 1, 0.2);
+          box-shadow: 0 0 15px 1px rgba(0, 1, 1, 0.2);
+}
+body {
+  background-color: #f2f2f2;
+}
+@media (min-width: 768px) and (max-width: 1280px) {
+  .master-wrapper {
+    width: 768px;
+    background-color: white;
+    -webkit-box-shadow: 0 0 15px 1px rgba(0, 1, 1, 0.2);
+            box-shadow: 0 0 15px 1px rgba(0, 1, 1, 0.2);
+  }
+  body {
+    background-color: #f2f2f2;
+  }
+}
+@media (min-width: 1280px) {
+  .master-wrapper {
+    padding: 0;
+    width: 1200px;
+    background-color: white;
+    -webkit-box-shadow: 0 0 15px 1px rgba(0, 1, 1, 0.2);
+            box-shadow: 0 0 15px 1px rgba(0, 1, 1, 0.2);
+  }
+  body {
+    background-color: #f2f2f2;
+  }
+}
+/* /Wrapper */
+/* Navigation */
+.main-nav {
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: height 0.5s ease-in;
+          transition: height 0.5s ease-in;
+}
 .main-nav__list {
   margin: 0;
   padding: 0;
@@ -534,7 +564,13 @@ body {
 }
 .main-nav__list-item:last-child {
   border-bottom: none;
-  box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.main-nav--show {
+  height: 222px;
+  -webkit-transition: height 0.5s ease-in;
+          transition: height 0.5s ease-in;
 }
 @media (min-width: 768px) and (max-width: 1280px) {
   .main-nav {
@@ -546,6 +582,8 @@ body {
     display: none;
   }
 }
+/* /Navigation */
+/* Main-Header */
 .main-header__rubber-bottom {
   text-align: center;
 }
@@ -560,7 +598,9 @@ body {
   z-index: 100;
   display: block;
   width: 68px;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .main-header__logo--bg {
   fill: #81b3d2;
@@ -569,7 +609,8 @@ body {
   z-index: 1;
   padding: 42px 0px 36px;
   background: url("../img/promo__background--form.png") no-repeat 50% 100%, url("../img/photo-background@1x.jpg") no-repeat 53.25% 0%;
-  background-size: auto, 240%;
+  -o-background-size: auto, 240%;
+     background-size: auto, 240%;
   text-align: center;
 }
 .main-header__promo svg {
@@ -577,24 +618,32 @@ body {
   margin: 0 auto;
 }
 .main-header__promo--welcome {
-  transform: scale(0.76);
+  -webkit-transform: scale(0.76);
+      -ms-transform: scale(0.76);
+          transform: scale(0.76);
 
   fill: #81b3d2;
 }
 .main-header__promo--to-the-gorgeous {
-  transform: scale(0.76);
+  -webkit-transform: scale(0.76);
+      -ms-transform: scale(0.76);
+          transform: scale(0.76);
 
   fill: #766458;
 }
 .main-header__promo--sedona {
   padding-top: 47px;
   padding-bottom: 32px;
-  transform: scale(0.605) translateX(-25%);
+  -webkit-transform: scale(0.605) translateX(-25%);
+      -ms-transform: scale(0.605) translateX(-25%);
+          transform: scale(0.605) translateX(-25%);
 
   fill: white;
 }
 .main-header__promo--because {
-  transform: scale(0.67);
+  -webkit-transform: scale(0.67);
+      -ms-transform: scale(0.67);
+          transform: scale(0.67);
 
   fill: white;
 }
@@ -621,8 +670,11 @@ body {
   .main-header__tablet .logo-tablet {
     display: inline-block;
     width: 20%;
+    text-align: center;
   }
   .main-header__tablet .logo-tablet__bg {
+    top: 0;
+
     fill: #81b3d2;
   }
   .main-header__tablet--href {
@@ -654,26 +706,35 @@ body {
     z-index: 5;
     padding: 77px 5px 85px;
     background: url("../img/promo__background--form.png") no-repeat center 100%, url("../img/photo-background@1x.jpg") no-repeat;
-    background-size: 100%, 100%;
+    -o-background-size: 100%, 100%;
+       background-size: 100%, 100%;
   }
   .main-header__promo svg {
     display: block;
     margin: 0 auto;
   }
   .main-header__promo--welcome {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
   }
   .main-header__promo--to-the-gorgeous {
     padding-top: 12px;
-    transform: scale(1);
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
   }
   .main-header__promo--sedona {
     padding-top: 51px;
     padding-bottom: 55px;
-    transform: scale(1) translateX(1%);
+    -webkit-transform: scale(1) translateX(1%);
+        -ms-transform: scale(1) translateX(1%);
+            transform: scale(1) translateX(1%);
   }
   .main-header__promo--because {
-    transform: scale(1) translateX(-3%);
+    -webkit-transform: scale(1) translateX(-3%);
+        -ms-transform: scale(1) translateX(-3%);
+            transform: scale(1) translateX(-3%);
   }
 }
 @media (min-width: 1280px) {
@@ -696,6 +757,7 @@ body {
   .main-header__tablet .logo-tablet {
     display: inline-block;
     width: 20%;
+    text-align: center;
   }
   .main-header__tablet .logo-tablet__bg {
     fill: #81b3d2;
@@ -729,44 +791,58 @@ body {
     z-index: 5;
     padding: 76px 0 81px;
     background: url("../img/promo__background--form-hd.png") no-repeat 0 100%, url("../img/photo-background@1x.jpg") no-repeat center 28%;
-    background-size: 100%, 100%;
+    -o-background-size: 100%, 100%;
+       background-size: 100%, 100%;
   }
   .main-header__promo svg {
     display: block;
     margin: 0 auto;
   }
   .main-header__promo--welcome {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
   }
   .main-header__promo--to-the-gorgeous {
     padding-top: 12px;
-    transform: scale(1);
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
   }
   .main-header__promo--sedona {
     padding-top: 51px;
     padding-bottom: 55px;
-    transform: scale(1) translateX(1%);
+    -webkit-transform: scale(1) translateX(1%);
+        -ms-transform: scale(1) translateX(1%);
+            transform: scale(1) translateX(1%);
   }
   .main-header__promo--because {
-    transform: scale(1) translateX(-2%);
+    -webkit-transform: scale(1) translateX(-2%);
+        -ms-transform: scale(1) translateX(-2%);
+            transform: scale(1) translateX(-2%);
   }
 }
-@media (min-resolution: 2dppx) {
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
   background: url("../img/promo__background--form.png") no-repeat 50% 100%, url("../img/photo-background@2x.jpg") no-repeat 53.25% 0%;
-  background-size: 100%, 240%;
+  -o-background-size: 100%, 240%;
+     background-size: 100%, 240%;
 }
-@media (min-width: 768px) and (max-width: 1280px) and (min-resolution: 2dppx) {
+@media (min-width: 768px) and (max-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (max-width: 1280px) and (-o-min-device-pixel-ratio: 2/1), (min-width: 768px) and (max-width: 1280px) and (min-resolution: 2dppx) {
   .main-header__promo {
     background: url("../img/promo__background--form.png") no-repeat center 100%, url("../img/photo-background@2x.jpg") no-repeat;
-    background-size: 100%, 100%;
+    -o-background-size: 100%, 100%;
+       background-size: 100%, 100%;
   }
 }
-@media (min-width: 1280px) and (min-resolution: 2dppx) {
+@media (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1280px) and (-o-min-device-pixel-ratio: 2/1), (min-width: 1280px) and (min-resolution: 2dppx) {
   .main-header__promo {
     background: url("../img/promo__background--form-hd.png") no-repeat 0 100%, url("../img/photo-background@2x.jpg") no-repeat center 28.5%;
-    background-size: 100%, 100%;
+    -o-background-size: 100%, 100%;
+       background-size: 100%, 100%;
   }
 }
+/* /Main-Header */
+/* Reasons */
 .reasons-header {
   margin: 0 auto;
   width: 270px;
@@ -825,7 +901,9 @@ body {
   height: 256px;
 }
 .reason-item__image img {
-  transform: translateX(-20.4%);
+  -webkit-transform: translateX(-20.4%);
+      -ms-transform: translateX(-20.4%);
+          transform: translateX(-20.4%);
 }
 .reason-item--first {
   background: url("../img/reason-item--form.png") no-repeat top center;
@@ -862,7 +940,9 @@ body {
   position: absolute;
   top: -1px;
   left: 10px;
-  transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+      -ms-transform: scale(0.5);
+          transform: scale(0.5);
 
   fill: #81b3d2;
 }
@@ -942,7 +1022,9 @@ body {
     width: 512px;
   }
   .reason-item__image img {
-    transform: none;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
   }
   .reason-item__image--second > .reason-item__image__image {
     float: left;
@@ -1004,7 +1086,9 @@ body {
   }
   .reason-item--img svg {
     position: static;
-    transform: scale(1);
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
   }
   .reason-item--house h2 {
     padding-top: 27px;
@@ -1104,8 +1188,14 @@ body {
     overflow: hidden;
     width: 800px;
     height: auto;
-    transform: none;
-    transform: translateY(-19%);
+    -webkit-transform: none;
+    -webkit-transform: translateY(-19%);
+        -ms-transform: none;
+        -ms-transform: translateY(-19%);
+            transform: none;
+            -webkit-transform: translateY(-19%);
+                -ms-transform: translateY(-19%);
+                    transform: translateY(-19%);
   }
   .reason-item__image--second > .reason-item__image__image {
     float: left;
@@ -1165,7 +1255,9 @@ body {
   }
   .reason-item--img svg {
     position: static;
-    transform: scale(1);
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
   }
   .reason-item--house h2 {
     padding-top: 27px;
@@ -1222,6 +1314,8 @@ body {
     font-size: 0;
   }
 }
+/* /Reasons */
+/* Hotels */
 .hotels {
   word-wrap: break-word;
 }
@@ -1294,7 +1388,9 @@ body {
 .search-hotel__input--background {
   position: absolute;
   right: 0;
-  transform: translate(-50%, -200%);
+  -webkit-transform: translate(-50%, -200%);
+      -ms-transform: translate(-50%, -200%);
+          transform: translate(-50%, -200%);
 
   fill: #c2c2c2;
 }
@@ -1368,11 +1464,25 @@ body {
     left: 50%;
     z-index: 30;
     display: block;
-    padding: 54px 55px;
-    width: 458px;
+    overflow: hidden;
+    padding: 0;
+    width: 568px;
+    height: 0;
     background-color: white;
-    box-shadow: 0px 2px 20px 2px rgba(0, 1, 1, 0.2);
-    transform: translateX(-284px);
+    -webkit-box-shadow: 0px 2px 20px 2px rgba(0, 1, 1, 0.2);
+            box-shadow: 0px 2px 20px 2px rgba(0, 1, 1, 0.2);
+    -webkit-transition: height 0.5s ease-in-out;
+            transition: height 0.5s ease-in-out;
+    -webkit-transform: translateX(-284px);
+        -ms-transform: translateX(-284px);
+            transform: translateX(-284px);
+  }
+  .search-hotel__form {
+    position: absolute;
+    padding: 54px 55px;
+  }
+  .search-hotel--show {
+    height: 395px;
   }
   .search-hotel__label,
   .search-hotel__input {
@@ -1394,7 +1504,9 @@ body {
   }
   .search-hotel__input--background {
     position: absolute;
-    transform: translate(-50%, 40%);
+    -webkit-transform: translate(-330%, 40%);
+        -ms-transform: translate(-330%, 40%);
+            transform: translate(-330%, 40%);
   }
   .search-hotel__column {
     padding-top: 2px;
@@ -1432,11 +1544,25 @@ body {
     left: 50%;
     z-index: 30;
     display: block;
-    padding: 54px 55px;
-    width: 458px;
+    overflow: hidden;
+    padding: 0;
+    width: 568px;
+    height: 0;
     background-color: white;
-    box-shadow: 0px 2px 20px 2px rgba(0, 1, 1, 0.2);
-    transform: translateX(-284px);
+    -webkit-box-shadow: 0px 2px 20px 2px rgba(0, 1, 1, 0.2);
+            box-shadow: 0px 2px 20px 2px rgba(0, 1, 1, 0.2);
+    -webkit-transition: height 0.5s ease-in-out;
+            transition: height 0.5s ease-in-out;
+    -webkit-transform: translateX(-284px);
+        -ms-transform: translateX(-284px);
+            transform: translateX(-284px);
+  }
+  .search-hotel__form {
+    position: absolute;
+    padding: 54px 55px;
+  }
+  .search-hotel--show {
+    height: 395px;
   }
   .search-hotel__label,
   .search-hotel__input {
@@ -1458,7 +1584,9 @@ body {
   }
   .search-hotel__input--background {
     position: absolute;
-    transform: translate(-50%, 40%);
+    -webkit-transform: translate(-330%, 40%);
+        -ms-transform: translate(-330%, 40%);
+            transform: translate(-330%, 40%);
   }
   .search-hotel__column {
     padding-top: 2px;
@@ -1470,6 +1598,8 @@ body {
     width: 47px;
   }
 }
+/* /Hotels */
+/* Main-Footer */
 .main-footer {
   position: relative;
 }
@@ -1484,7 +1614,8 @@ body {
   z-index: 10;
   width: 320px;
   height: 10px;
-  box-shadow: inset 0 12px 20px -13px grey;
+  -webkit-box-shadow: inset 0 12px 20px -13px grey;
+          box-shadow: inset 0 12px 20px -13px grey;
   content: "";
 }
 .main-footer__links {
@@ -1656,7 +1787,13 @@ body {
     vertical-align: middle;
   }
   .main-footer .links-copyright {
-    margin-top: 12px;
-    margin-left: 226px;
+    margin-top: 12px; 
+    margin-left: 226px; 
   }
 }
+/* /Main-Footer */
+/* /Project 
+---------------------------------------------------------------------------------- */
+/* Cosmetic - Third layer
+---------------------------------------------------------------------------------- */
+/* Variables */
